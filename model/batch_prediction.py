@@ -1,17 +1,17 @@
 import pandas as pd
 import joblib
 
-model = joblib.load("churn_model.pkl")
-columns = joblib.load("columns.pkl")
+model = joblib.load("model/churn_model.pkl")
+columns = joblib.load("model/columns.pkl")
 
 # Create all columns = 0
 input_data = {col: 0 for col in columns}
 
 # INPUT VALUES
-tenure = 5
-monthly = 70
-total = 350
-gender = "Male"
+tenure = 4
+monthly = 79
+total = 399
+gender = "Female"
 contract = "Month-to-month"
 
 # Fill numeric

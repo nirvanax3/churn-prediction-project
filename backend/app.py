@@ -8,8 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model + columns
-model = joblib.load("churn_model.pkl")
-columns = joblib.load("columns.pkl")
+model = joblib.load("model/churn_model.pkl")
+columns = joblib.load("model/columns.pkl")
 
 @app.route('/predict', methods=['POST'])
 def predict():
